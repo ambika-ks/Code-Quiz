@@ -1,4 +1,4 @@
-# Web APIs: Code Quiz
+#  Code Quiz : Web APIs
 
 ## Your Task
 
@@ -11,8 +11,8 @@ To help you become familiar with these tests and give you a chance to apply the 
 
 ```
 AS a coding Student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+I want to take a timed quiz on JavaScript fundamentals that stores high scores,
+So that I can gauge my progress compared to my peers
 ```
 
 ## Acceptance Criteria
