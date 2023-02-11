@@ -36,7 +36,7 @@ var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var nameEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
-var reStartBtn = document.querySelector("#restart");
+
 
 
 //initial state
@@ -47,7 +47,7 @@ var timerId;
 
 // Start quiz... and hide frontpage
 function quizStart() {
-    timerId = setInterval(clockTick, 1000);
+    timerId = setInterval(TimerTime, 1000);
     timerEl.textContent = time;
     var landingScreenEl = document.getElementById("start-screen");
     landingScreenEl.setAttribute("class", "hide");
@@ -63,11 +63,11 @@ function getQuestion() {
     promptEl.textContent = currentQuestion.prompt;
     choicesEl.innerHTML = "";
     currentQuestion.options.forEach(function(choices, i) {
-        var choiceBtn = document.createElement("button");
-        choiceBtn.setAttribute("value", choices);
-        choiceBtn.textContent = i + 1 + ". " + choices;
-        choiceBtn.onclick = questionClick;
-        choicesEl.appendChild(choiceBtn);
+        var optionBtn = document.createElement("button");
+        optionBtn.setAttribute("value", choices);
+        optionBtn.textContent = i + 1 + ". " + choices;
+        optionBtn.onclick = questionClick;
+        choicesEl.appendChild(optionBtn);
     });
 }
 
@@ -114,7 +114,7 @@ function quizEnd() {
 
 
 // finish quiz  when timer is 0
-function clockTick() {
+function TimerTime() {
     time--;
     timerEl.textContent = time;
     if (time <= 0) {
@@ -123,7 +123,7 @@ function clockTick() {
 }
 
 // Save  user name and score
-function saveHighscore() {
+function TopScore() {
     var name = nameEl.value.trim();
     if (name !== " ") {
       var highscores =JSON.parse(window.localStorage.getItem("highscores")) || [];
@@ -137,17 +137,17 @@ function saveHighscore() {
 }
 
 // Save users' score
-function checkForEnter(event) {
+function OnEnter(event) {
     if (event.key === "Enter") {
-        saveHighscore();
+        TopScore();
     }
 }
-nameEl.onkeyup = checkForEnter;
+nameEl.onkeyup = OnEnter;
 
 
 
 // Save score - clicking submit
-submitBtn.onclick = saveHighscore;
+submitBtn.onclick = TopScore;
 
 
 // Start quiz - click start 

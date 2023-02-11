@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
   font-size: 120%;
+  background-color: rgba(127, 255, 212, 0.426);
 }
 
 a {
@@ -45,12 +46,12 @@ ol {
 }
 
 li {
-  padding: 5px;
+  padding: 10px;
   list-style: decimal inside none;
 }
 
 li:nth-child(odd) {
-  background-color: #f3edfc;
+  background-color: #f5faf6f7;
 }
 
 .wrapper {
