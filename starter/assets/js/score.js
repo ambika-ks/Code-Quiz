@@ -15,7 +15,7 @@ function printHighscores() {
     });
 }
 
-// Clear previous scores when users click clear 
+// Clear previous scores 
   function clearHighscores() {
     window.localStorage.removeItem("highscores");
     window.location.reload();

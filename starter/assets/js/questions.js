@@ -125,9 +125,8 @@ function clockTick() {
 // Save  user name and score
 function saveHighscore() {
     var name = nameEl.value.trim();
-    if (name !== "") {
-      var highscores =
-      JSON.parse(window.localStorage.getItem("highscores")) || [];
+    if (name !== " ") {
+      var highscores =JSON.parse(window.localStorage.getItem("highscores")) || [];
       var newScore = {
         score: time,
         name: name

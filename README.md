@@ -10,7 +10,7 @@ To help you become familiar with these tests and give you a chance to apply the 
 ## User Story
 
 ```
-AS a coding Student
+As a coding Student
 I want to take a timed quiz on JavaScript fundamentals that stores high scores,
 So that I can gauge my progress compared to my peers
 ```
