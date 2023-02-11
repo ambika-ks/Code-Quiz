@@ -74,10 +74,10 @@ function getQuestion() {
 
 // Check for right answers and reduce time for wrong one , then next question
 function questionClick() {
-  console.log(this.value);
-  console.log(questions[currentQuestionIndex]);
-  console.log(questions[currentQuestionIndex].answer);
-  console.log(`===========================`);
+  // console.log(this.value);
+  // console.log(questions[currentQuestionIndex]);
+  // console.log(questions[currentQuestionIndex].answer);
+  // console.log(`===========================`);
     if (this.value !== questions[currentQuestionIndex].answer) {
       time -= 10;
       if (time < 0) {
@@ -127,24 +127,17 @@ function saveHighscore() {
     var name = nameEl.value.trim();
     if (name !== "") {
       var highscores =
-        JSON.parse(window.localStorage.getItem("highscores")) || [];
-        console.log(`-------777777  ----highscores ${highscores}`);
+      JSON.parse(window.localStorage.getItem("highscores")) || [];
       var newScore = {
         score: time,
         name: name
       };
-      console.log(`----------------highscores ${highscores}`);
-      console.log(`-------------newscore ${newScore}`);
       highscores.push(newScore);
       window.localStorage.setItem("highscores", JSON.stringify(highscores));
-      
-       console.log(`==---------highscores ${highscores}`);
-      console.log(`=====---------newscore ${newScore}`);
     }
 }
 
 // Save users' score
-
 function checkForEnter(event) {
     if (event.key === "Enter") {
         saveHighscore();
@@ -152,10 +145,11 @@ function checkForEnter(event) {
 }
 nameEl.onkeyup = checkForEnter;
 
-// Save score - clicking submit
 
+
+// Save score - clicking submit
 submitBtn.onclick = saveHighscore;
 
-// Start quiz - click start 
 
+// Start quiz - click start 
 startBtn.onclick = quizStart;
