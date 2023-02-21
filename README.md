@@ -25,15 +25,20 @@ Create a code quiz that contains the following requirements:
   * When answer is clicked, the next question appears
   * If the answer clicked was incorrect then subtract time from the clock
   * The quiz should end when all questions are answered or the timer reaches 0.
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-# The deployed application is available at :
- https://ambika-ks.github.io/Code-Quiz/
+  * When the game ends, it should display their score and give the user the ability to save their initials and their score.
+
 ## Mock-Up
 
 The following animation demonstrates the application functionality:
 
 ![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./starter/assets/images/08-web-apis-challenge-demo.gif)
 
+  
+## The deployed application is available at :
+ https://ambika-ks.github.io/Code-Quiz/
 
+
+
+
+ 
 
